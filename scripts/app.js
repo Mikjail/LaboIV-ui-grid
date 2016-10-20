@@ -28,6 +28,11 @@ angular
       templateUrl: 'views/config.html',
       controller:'ConfCtrl'
     })
+     .state('confTP', {
+      url: '/confTP',
+      templateUrl: 'views/configurarTP.html',
+      controller:'ConfTPCtrl'
+    })
     .state('exportar', {
       url: '/exportar',
       templateUrl: 'views/exportar.html',
