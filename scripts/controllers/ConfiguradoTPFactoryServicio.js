@@ -1,11 +1,11 @@
 angular
   .module('app')
-  .controller('ConfTPSrvCtrl', function($scope, data, ServicioBanderas, i18nService, uiGridConstants) {
-  
+  .controller('configuradoTPFactoryServiceCtrl', function($scope, data, ServicioBanderas, FactoryBanderas ,FactoryBanderasConService, i18nService, uiGridConstants) {
+    
 
-
-    /////////////////////////////////////////////////
-
+    console.info("FactoryBanderasConService",FactoryBanderasConService);
+    console.info("FactoryBanderas",FactoryBanderas);
+      console.info("ServicioBanderas",ServicioBanderas);
     ////////////////////////////////////////
     //         GRILLA DE BANDERAS         //
     ////////////////////////////////////////
@@ -21,21 +21,36 @@ angular
     // Activo la busqueda en todos los campos.
     $scope.gridOptionsBanderas.enableFiltering = true;
 
-    console.info("Servicio Banderas", ServicioBanderas);
+    //console.info("Servicio Banderas", banderas);
 
     // banderas.traerUnPais('argentina').then(function(rta){
     //   console.info("RESPUESTA BANDERAS",rta);
     //   $scope.gridOptionsBanderas.data = rta;
     // });
 
-    ServicioBanderas.traerTodos().then(function(rta){
+  /*  banderas.traerTodos().then(function(rta){
       console.info("RESPUESTA BANDERAS",rta);
       $scope.gridOptionsBanderas.data = rta;
     });
 
-    ServicioBanderas.traerSoloImagenes().then(function(rta){
+    banderas.traerSoloImagenes().then(function(rta){
       console.info("RESPUESTA IMAGENES",rta);
     });
+    */
+
+/*
+    FactoryBanderas.traerTodo().then(function(rta){
+      console.info("RESPUESTA BANDERAS",rta);
+      $scope.gridOptionsBanderas.data = rta;
+    });
+*/
+
+FactoryBanderasConService.traerTodo().then(function(rta){
+     // console.info("RESPUESTA BANDERAS",rta);
+      $scope.gridOptionsBanderas.data = rta;
+    });
+
+
 
     function columnDefsBanderas () {
       return [

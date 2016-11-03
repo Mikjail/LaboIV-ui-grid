@@ -1,42 +1,42 @@
 angular
   .module('app')
-.factory("PaisesFactory", function(Paises){
+.factory("FactoryBanderasConService", function(ServicioBanderas){
 	// VARIABLES
-	var o = {};	
-	var url = "http://www.egos27.somee.com/api/bandera";
-	o.nombreServicio = "Paises";
-	// METODOS
-	o.traerTodo = traerTodo;
-	o.traerNombre = traerNombre;
-	o.traerBanderas = traerBanderas;
-	o.traerPais = traerPais;
+	var objetoRetorno = {};	
 
-	return o;
-	// PRIVADO
-	function traerUrl(param){
+	//var url = "http://www.egos27.somee.com/api/bandera"; // ahora 
+	objetoRetorno.nombreServicio = "Factory paises y banderas con servicio";
+	// METODOS
+	objetoRetorno.traerTodo = traerTodo;
+	objetoRetorno.traerNombre = traerNombre;
+	objetoRetorno.traerBanderas = traerBanderas;
+	objetoRetorno.traerPais = traerPais;
+
+	return objetoRetorno;
+	// PRIVADO : funcion sin uso en este caso
+	/*function traerUrl(param){
 		
 		if (!param)
 			return url;
 		
 		return url + "/" + param;;
-	}
+	}*/ 
 
 	//PUBLICO
 	function traerTodo(){
-		return Paises.traerTodo();
+		return ServicioBanderas.traerTodos();
 	}
 
 
 	function traerNombre(){
-
-		return Paises.traerNombre();
+		return ServicioBanderas.traerNombre();
 	}
 
 	function traerBanderas(){
-		return Paises.traerBanderas();
+		return ServicioBanderas.traerBanderas();
 	}
 
 	function traerPais(pais){
-		return Paises.traerPais(pais);
+		return ServicioBanderas.traerPais(pais);
 	}
 })

@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .service('banderas', function ($http) {
+  .service('ServicioBanderas', function ($http) {
     this.traerUnPais = traerUnPais;
     var url = 'http://www.egos27.somee.com/api/bandera/';
 
@@ -19,7 +19,7 @@ angular
       }
     };
 
-    this.nombre = "Banderas";
+    this.nombre = "servicio de paises y banderas";
 
     this.traerTodos = function(){
       return $http.get(traerUrl()).then(function(data){

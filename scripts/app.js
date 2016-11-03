@@ -36,13 +36,18 @@ angular
     })
     .state('configuradoTPServicios', {
       url: '/configuradoTPServicios',
-      templateUrl: 'views/configuradoTPServicios.html',
+      templateUrl: 'views/ConfiguradoTPServiciosFactory.html',
       controller:'ConfTPSrvCtrl'
     })
      .state('configuradoTPFactory', {
       url: '/configuradoTPFactory',
-      templateUrl: 'views/configuradoTPFactory.html',
+      templateUrl: 'views/ConfiguradoTPServiciosFactory.html',
       controller:'configuradoTPFactoryCtrl'
+    })
+     .state('configuradoTPFactoryConServicio', {
+      url: '/configuradoTPFactory',
+      templateUrl: 'views/ConfiguradoTPServiciosFactory.html',
+      controller:'configuradoTPFactoryServiceCtrl'
     })
     .state('exportar', {
       url: '/exportar',

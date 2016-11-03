@@ -4,7 +4,7 @@ angular
 	// VARIABLES
 	var o = {};	
 	var url = "http://www.egos27.somee.com/api/bandera";
-	o.nombreFactory = "Paises y banderas";
+	o.nombreFactory = "Factory paises y banderas";
 	// METODOS
 	o.traerTodo = traerTodo;
 	o.traerNombre = traerNombre;
