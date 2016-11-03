@@ -1,17 +1,17 @@
 angular
   .module('app', [
+    'ngMap',
     'ui.router',
     'ui.grid',
     'ui.grid.pagination',
     'ui.grid.resizeColumns',
     'ui.grid.selection',
     'ui.grid.exporter',
-    'ui.grid.edit',
-    'ngMap'
+    'ui.grid.edit'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('simple');
+    $urlRouterProvider.otherwise('configuradoTP');
     $stateProvider
 
     .state('simple', {
@@ -29,10 +29,20 @@ angular
       templateUrl: 'views/config.html',
       controller:'ConfCtrl'
     })
-     .state('confTP', {
-      url: '/confTP',
-      templateUrl: 'views/configurarTP.html',
+    .state('configuradoTP', {
+      url: '/configuradoTP',
+      templateUrl: 'views/configuradoTP.html',
       controller:'ConfTPCtrl'
+    })
+    .state('configuradoTPServicios', {
+      url: '/configuradoTPServicios',
+      templateUrl: 'views/configuradoTPServicios.html',
+      controller:'ConfTPSrvCtrl'
+    })
+     .state('configuradoTPFactory', {
+      url: '/configuradoTPFactory',
+      templateUrl: 'views/configuradoTPFactory.html',
+      controller:'configuradoTPFactoryCtrl'
     })
     .state('exportar', {
       url: '/exportar',
